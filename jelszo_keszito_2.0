@@ -1,0 +1,31 @@
+import random
+import time
+import colorama
+from colorama import *
+colorama.init(autoreset=True)
+true = True
+while true:
+    valasz = input(Fore.CYAN + "Akarsz Jelszó-t generálni? igen/nem: ")
+    if valasz == "igen":
+        hossz = int(input(Fore.CYAN + "Milyen hosszú legyen:"))
+        print(Fore.LIGHTRED_EX + "...Jelszó generálás...")
+        time.sleep(1)
+        print(Fore.GREEN + "Kész 5.")
+        time.sleep(1)
+        print(Fore.GREEN + "Kész 4.")
+        time.sleep(1)
+        print(Fore.GREEN + "Kész 3.")
+        time.sleep(1)
+        print(Fore.GREEN + "Kész 2.")
+        time.sleep(1)
+        print(Fore.GREEN + "Kész 1.")
+        time.sleep(1)
+        print(Fore.GREEN + "Kész...")
+        betük = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnipqrstuvwxyz"
+        Jelszó = ""
+        for i in range(0,hossz,1):
+            Jelszó += betük[random.randint(0,len(betük))]
+        time.sleep(3)
+        print(Back.BLACK + Fore.WHITE + "[ " + Fore.LIGHTCYAN_EX + Jelszó + Fore.WHITE + " ]")
+    else:
+        break
