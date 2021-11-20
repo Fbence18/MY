@@ -1,0 +1,20 @@
+import time
+import random
+
+import colorama
+from colorama import Fore, Back, Style
+colorama.init(autoreset=True)
+
+while True:
+    decision = input(Fore.CYAN + 'akarsz generálni kódót? igen/nem")
+    if decision == 'igen':
+        length = int(input(Fore.CYAN +'Milyen hósszú legyen a jelszó?: '))
+        print('Jelszó generálás ...')
+        s = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnipqrstuvwxyz+!%/'
+        p = ''
+        for i in range(0, length, 1):
+            p += s[random.randint(0, len(s))]
+        time.sleep(3)
+        print(Fore.WHITE + "[" + Fore.BLACK + p + Fore.WHITE+ "]")
+    else:
+        break
